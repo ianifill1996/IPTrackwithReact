@@ -1,0 +1,37 @@
+.search-form {
+  display: flex;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+  z-index: 2;
+  position: relative;
+}
+
+.search-form input {
+  flex: 1;
+  padding: 1rem 1.2rem;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+  font-family: inherit;
+}
+
+.search-form button {
+  background-color: black;
+  border: none;
+  padding: 1rem 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-form button img {
+  width: 12px;
+  height: 12px;
+  object-fit: contain;
+}
