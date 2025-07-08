@@ -1,12 +1,66 @@
-# React + Vite
+# IP Address Tracker 🌐
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a responsive IP Address Tracker application that allows users to search for any IP address or domain name and receive location details including the IP, city, region, timezone, ISP, and a map view.
 
-Currently, two official plugins are available:
+Built with React and Leaflet, styled with custom CSS, and powered by the IP-API for location data.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔍 Features
 
-## Expanding the ESLint configuration
+- IP or domain lookup
+- Displays:
+  - IP Address
+  - City & Region
+  - Timezone (UTC offset)
+  - Internet Service Provider
+- Interactive map with marker using Leaflet
+- Responsive layout (mobile + desktop)
+- Search with input validation and error handling
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Technologies Used
+
+- React
+- Vite
+- Leaflet (OpenStreetMap)
+- IP-API (https://ip-api.com/)
+- CSS3 / Media Queries
+- React Hooks (useState, useEffect)
+
+## 🚀 Getting Started
+
+To run this app locally
+
+git clone https://github.com/yourusername/ip-address-tracker.git
+cd ip-address-tracker
+npm install
+npm run dev
+Then open http://localhost:5173 in your browser.
+
+## 🗺️ API Used
+IP-API: Simple, no-auth API to get IP geolocation.
+
+Endpoint example: http://ip-api.com/json/8.8.8.8
+
+## Folder Structure
+php
+Copy
+Edit
+src/
+├── assets/               # Icons and images
+├── components/           # React components
+│   ├── SearchBar.jsx
+│   ├── IPDetails.jsx
+│   └── MapView.jsx
+├── styles/               # CSS modules
+├── App.jsx               # Main app logic
+├── main.jsx              # Entry point
+├── index.css             # Global styles
+public/
+└── images/               # Reference design files only
+
+## Reflection
+Most challenging part:
+Integrating Leaflet map tiles dynamically with marker positioning based on API data required careful handling of async data and proper coordinate formatting.
+
+Design decision:
+Kept all major UI state in the App component to allow consistent data sharing between SearchBar, IPDetails, and MapView. Used minimal dependencies to retain full control over styling and responsiveness.
+
