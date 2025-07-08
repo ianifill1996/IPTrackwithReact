@@ -29,7 +29,7 @@ Built with React and Leaflet, styled with custom CSS, and powered by the IP-API 
 
 To run this app locally
 
-git clone https://github.com/yourusername/ip-address-tracker.git
+git clone https://github.com/ianifill1996/ip-address-tracker.git
 cd ip-address-tracker
 npm install
 npm run dev
